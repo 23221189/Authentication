@@ -1,0 +1,1266 @@
+@import url('https://api.fontshare.com/v2/css?f[]=clash-display@600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Anton&family=Archivo+Black&family=Miniver&family=Poppins&family=Sekuya&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-clash: "Clash Display", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+  --font-ancizar: "Ancizar Serif", serif;
+}
+
+@theme {
+  --color-primary: #615170;
+  --color-secondary: #7B6B8F;
+  --color-accent: #22C55E;
+  --color-accent-alt: #fff4e6;
+  --color-surface: #F3F4F6;
+  --color-divider: #E5E7EB;
+  --color-charcoal: #111827;
+  --color-muted: #6B7280;
+  --color-error: #EF4444;
+  --color-success: #10B981;
+  --color-muted-teal: #5F7F80;
+  --color-primary-teal: #009C91;
+  --color-verifed: #4A7C59;
+  --color-secure: #D97706;
+  --color-community: #8B5CF6;
+  --color-hover: #3F6C4F;
+  --color-bgbutton: #4A7C59;
+  --color-booking: #10B981;
+}
+
+:root {
+  --theme-bg: #000000;
+  --theme-surface: #050505;
+  --theme-card: #0d0d0d;
+
+  --theme-text: #f5efe3;
+  --theme-muted: #b8b0a3;
+  --theme-muted-light: #bdb6aa;
+  --theme-muted-dark: #8f897f;
+
+  --theme-border: #3a3328;
+
+  --theme-accent: #c9a45c;
+  --theme-accent-hover: #dfbf7b;
+
+  --theme-button-text: #050505;
+
+  --theme-success: #22c55e;
+  --theme-success-text: #86efac;
+
+  --theme-danger: #ef4444;
+  --theme-danger-text: #f87171;
+
+  --theme-warning: #eab308;
+  --theme-warning-text: #fde047;
+
+  --theme-overlay: rgba(5, 5, 5, 0.92);
+
+  /* Status colors (same in every theme) */
+  --status-red: #dc2626;
+  --status-red-hover: #b91c1c;
+  --status-green: #16a34a;
+  --status-green-hover: #15803d;
+  --status-gold: #8B5A2B;
+  --status-gold-hover: #552C06;
+}
+
+html[data-theme="black"] {
+  --theme-bg: #171717;
+  --theme-surface: #050505;
+  --theme-card: #0d0d0d;
+
+  --theme-text: #f5efe3;
+  --theme-muted: #b8b0a3;
+  --theme-muted-light: #bdb6aa;
+  --theme-muted-dark: #8f897f;
+
+  --theme-border: #3a3328;
+
+  --theme-accent: #c9a45c;
+  --theme-accent-hover: #dfbf7b;
+
+  --theme-button-text: #050505;
+
+  --theme-success: #22c55e;
+  --theme-success-text: #86efac;
+
+  --theme-danger: #ef4444;
+  --theme-danger-text: #f87171;
+
+  --theme-warning: #eab308;
+  --theme-warning-text: #fde047;
+
+  --theme-overlay: rgba(5, 5, 5, 0.92);
+}
+
+html[data-theme="offwhite"] {
+  --theme-bg: #F7F1E7;
+  --theme-surface: #F7F1E7;
+  --theme-card: #F7F1E7;
+
+  --theme-text: #552C06;
+  --theme-muted: #5C3310;
+  --theme-muted-light: #5C3310;
+  --theme-muted-dark: #5C3310;
+
+  --theme-border: #8B5A2B;
+
+  --theme-accent: #8B5A2B;
+  --theme-accent-hover: #552C06;
+
+  --theme-button-text: #FFFFFF;
+
+  --theme-success: #8B5A2B;
+  --theme-success-text: #552C06;
+
+  --theme-danger: #8B5A2B;
+  --theme-danger-text: #552C06;
+
+  --theme-warning: #8B5A2B;
+  --theme-warning-text: #552C06;
+
+  --theme-overlay: rgba(247, 241, 231, 0.92);
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: var(--theme-bg);
+  color: var(--theme-text);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  background-color: var(--theme-bg);
+  color: var(--theme-text);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--theme-bg);
+  color: var(--theme-text);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.theme-dark,
+.theme-black,
+.theme-offwhite {
+  background-color: var(--theme-bg);
+  color: var(--theme-text);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.theme-transition,
+.theme-transition * {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.theme-bg {
+  background-color: var(--theme-bg);
+}
+
+.theme-surface {
+  background-color: var(--theme-surface);
+}
+
+.theme-card {
+  background-color: var(--theme-card);
+}
+
+.theme-text {
+  color: var(--theme-text);
+}
+
+.theme-muted {
+  color: var(--theme-muted);
+}
+
+.theme-muted-light {
+  color: var(--theme-muted-light);
+}
+
+.theme-muted-dark {
+  color: var(--theme-muted-dark);
+}
+
+.theme-accent {
+  color: var(--theme-accent);
+}
+
+.theme-accent-bg {
+  background-color: var(--theme-accent);
+  color: var(--theme-button-text);
+}
+
+.theme-border {
+  border-color: var(--theme-border);
+}
+
+.theme-accent-border {
+  border-color: var(--theme-accent);
+}
+
+input,
+textarea,
+select {
+  color: var(--theme-text);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--theme-muted-dark);
+  opacity: 1;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline-color: var(--theme-accent);
+}
+
+select {
+  background-color: var(--theme-surface);
+  color: var(--theme-text);
+}
+
+select option {
+  background-color: var(--theme-bg);
+  color: var(--theme-text);
+}
+
+select option:checked {
+  background-color: var(--theme-accent);
+  color: var(--theme-button-text);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:active {
+  -webkit-box-shadow:
+    0 0 0 1000px var(--theme-surface) inset !important;
+
+  box-shadow:
+    0 0 0 1000px var(--theme-surface) inset !important;
+
+  -webkit-text-fill-color: var(--theme-text) !important;
+
+  caret-color: var(--theme-text) !important;
+
+  transition:
+    background-color 9999s ease-in-out 0s;
+}
+
+::selection {
+  background-color: var(--theme-accent);
+  color: var(--theme-button-text);
+}
+
+input::selection,
+textarea::selection {
+  background-color: var(--theme-accent);
+  color: var(--theme-button-text);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color:
+    var(--theme-accent)
+    var(--theme-surface);
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--theme-surface);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--theme-border);
+  border-radius: 999px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--theme-accent);
+}
+
+.bg-\[\#050505\] {
+  background-color: var(--theme-bg) !important;
+}
+
+.bg-\[\#050505\]\/95 {
+  background-color: color-mix(
+    in srgb,
+    var(--theme-surface) 95%,
+    transparent
+  ) !important;
+}
+
+.bg-\[\#050505\]\/92 {
+  background-color: color-mix(
+    in srgb,
+    var(--theme-surface) 92%,
+    transparent
+  ) !important;
+}
+
+.bg-\[\#050505\]\/90 {
+  background-color: color-mix(
+    in srgb,
+    var(--theme-surface) 90%,
+    transparent
+  ) !important;
+}
+
+.bg-\[\#050505\]\/80 {
+  background-color: color-mix(
+    in srgb,
+    var(--theme-surface) 80%,
+    transparent
+  ) !important;
+}
+
+.bg-\[\#050505\]\/70 {
+  background-color: color-mix(
+    in srgb,
+    var(--theme-surface) 70%,
+    transparent
+  ) !important;
+}
+
+.hover\:bg-\[\#050505\]:hover {
+  background-color: var(--theme-bg) !important;
+}
+
+.text-\[\#f5efe3\] {
+  color: var(--theme-text) !important;
+}
+
+.text-\[\#f5efe3\]\/90 {
+  color: color-mix(
+    in srgb,
+    var(--theme-text) 90%,
+    transparent
+  ) !important;
+}
+
+.text-\[\#f5efe3\]\/80 {
+  color: color-mix(
+    in srgb,
+    var(--theme-text) 80%,
+    transparent
+  ) !important;
+}
+
+.text-\[\#bdb6aa\] {
+  color: var(--theme-muted-light) !important;
+}
+
+.text-\[\#8f897f\] {
+  color: var(--theme-muted-dark) !important;
+}
+
+.text-\[\#777066\] {
+  color: var(--theme-muted-dark) !important;
+}
+
+.text-\[\#6f695f\] {
+  color: var(--theme-muted-dark) !important;
+}
+
+.text-\[\#c9a45c\] {
+  color: var(--theme-accent) !important;
+}
+
+.bg-\[\#c9a45c\] {
+  background-color: var(--theme-accent) !important;
+}
+
+.border-\[\#c9a45c\] {
+  border-color: var(--theme-accent) !important;
+}
+
+.hover\:text-\[\#c9a45c\]:hover {
+  color: var(--theme-accent) !important;
+}
+
+.hover\:bg-\[\#c9a45c\]:hover {
+  background-color: var(--theme-accent) !important;
+}
+
+.hover\:border-\[\#c9a45c\]:hover {
+  border-color: var(--theme-accent) !important;
+}
+
+.border-\[\#c9a45c\]\/70 {
+  border-color: color-mix(
+    in srgb,
+    var(--theme-accent) 70%,
+    transparent
+  ) !important;
+}
+
+.border-\[\#c9a45c\]\/50 {
+  border-color: color-mix(
+    in srgb,
+    var(--theme-accent) 50%,
+    transparent
+  ) !important;
+}
+
+.border-\[\#c9a45c\]\/40 {
+  border-color: color-mix(
+    in srgb,
+    var(--theme-accent) 40%,
+    transparent
+  ) !important;
+}
+
+.border-\[\#c9a45c\]\/30 {
+  border-color: color-mix(
+    in srgb,
+    var(--theme-accent) 30%,
+    transparent
+  ) !important;
+}
+
+.border-\[\#c9a45c\]\/20 {
+  border-color: color-mix(
+    in srgb,
+    var(--theme-accent) 20%,
+    transparent
+  ) !important;
+}
+
+.bg-\[\#c9a45c\]\/10 {
+  background-color: color-mix(
+    in srgb,
+    var(--theme-accent) 10%,
+    transparent
+  ) !important;
+}
+
+.bg-\[\#c9a45c\]\/15 {
+  background-color: color-mix(
+    in srgb,
+    var(--theme-accent) 15%,
+    transparent
+  ) !important;
+}
+
+.bg-\[\#c9a45c\]\/20 {
+  background-color: color-mix(
+    in srgb,
+    var(--theme-accent) 20%,
+    transparent
+  ) !important;
+}
+
+.border-\[\#3a3328\] {
+  border-color: var(--theme-border) !important;
+}
+
+.hover\:border-\[\#3a3328\]:hover {
+  border-color: var(--theme-border) !important;
+}
+
+.focus\:border-\[\#c9a45c\]:focus {
+  border-color: var(--theme-accent) !important;
+}
+
+.focus-within\:border-\[\#c9a45c\]:focus-within {
+  border-color: var(--theme-accent) !important;
+}
+
+.focus\:ring-\[\#c9a45c\]\/20:focus {
+  --tw-ring-color: color-mix(
+    in srgb,
+    var(--theme-accent) 20%,
+    transparent
+  ) !important;
+}
+
+.focus-within\:ring-\[\#c9a45c\]\/15:focus-within {
+  --tw-ring-color: color-mix(
+    in srgb,
+    var(--theme-accent) 15%,
+    transparent
+  ) !important;
+}
+
+.text-green-400 {
+  color: var(--theme-success-text) !important;
+}
+
+.border-green-400 {
+  border-color: var(--theme-success) !important;
+}
+
+.border-green-500\/45 {
+  border-color: color-mix(
+    in srgb,
+    var(--theme-success) 45%,
+    transparent
+  ) !important;
+}
+
+.bg-green-500\/10 {
+  background-color: color-mix(
+    in srgb,
+    var(--theme-success) 10%,
+    transparent
+  ) !important;
+}
+
+.bg-green-500\/15 {
+  background-color: color-mix(
+    in srgb,
+    var(--theme-success) 15%,
+    transparent
+  ) !important;
+}
+
+.hover\:bg-green-500\/15:hover {
+  background-color: color-mix(
+    in srgb,
+    var(--theme-success) 15%,
+    transparent
+  ) !important;
+}
+
+.hover\:border-green-400:hover {
+  border-color: var(--theme-success) !important;
+}
+
+.text-red-400 {
+  color: var(--theme-danger-text) !important;
+}
+
+.border-red-400 {
+  border-color: var(--theme-danger) !important;
+}
+
+.border-red-500\/45 {
+  border-color: color-mix(
+    in srgb,
+    var(--theme-danger) 45%,
+    transparent
+  ) !important;
+}
+
+.bg-red-500\/10 {
+  background-color: color-mix(
+    in srgb,
+    var(--theme-danger) 10%,
+    transparent
+  ) !important;
+}
+
+.bg-red-500\/15 {
+  background-color: color-mix(
+    in srgb,
+    var(--theme-danger) 15%,
+    transparent
+  ) !important;
+}
+
+.hover\:bg-red-500\/15:hover {
+  background-color: color-mix(
+    in srgb,
+    var(--theme-danger) 15%,
+    transparent
+  ) !important;
+}
+
+.hover\:border-red-400:hover {
+  border-color: var(--theme-danger) !important;
+}
+
+html[data-theme="offwhite"] .text-\[\#c9a45c\] {
+  color: #8B5A2B !important;
+}
+
+html[data-theme="offwhite"] button[aria-label*="profile" i]:hover,
+html[data-theme="offwhite"] button[aria-label*="account" i]:hover {
+  background-color: inherit !important;
+  color: inherit !important;
+  border-color: inherit !important;
+}
+
+html[data-theme="offwhite"] .bg-\[\#050505\]:hover,
+html[data-theme="offwhite"] .theme-card:hover,
+html[data-theme="offwhite"] .theme-surface:hover {
+  background-color: var(--theme-bg) !important;
+  color: inherit !important;
+  border-color: var(--theme-border) !important;
+  box-shadow: inherit !important;
+}
+
+html[data-theme="offwhite"] .bg-\[\#c9a45c\] {
+  background-color: var(--theme-bg) !important;
+  color: var(--theme-text) !important;
+}
+
+html[data-theme="offwhite"] .border-\[\#c9a45c\] {
+  border-color: #8B5A2B !important;
+}
+
+/* FIXED: white text only for elements that also change background on hover (buttons) */
+html[data-theme="offwhite"] .hover\:text-\[\#c9a45c\]:hover[class*="hover:bg-"] {
+  color: #FFFFFF !important;
+}
+
+/* FIXED: other links (nav, Home, About etc.) never turn white on hover */
+html[data-theme="offwhite"] .hover\:text-\[\#c9a45c\]:hover:not([class*="hover:bg-"]) {
+  color: var(--theme-accent-hover) !important;
+}
+
+html[data-theme="offwhite"] .hover\:border-\[\#c9a45c\]:hover {
+  border-color: #552C06 !important;
+}
+
+html[data-theme="offwhite"] button {
+  background-color: var(--theme-bg);
+  color: var(--theme-text);
+  border-color: var(--theme-border);
+}
+
+html[data-theme="offwhite"] .bg-\[\#c9a45c\] {
+  background-color: var(--theme-bg) !important;
+  color: var(--theme-text) !important;
+}
+
+html[data-theme="offwhite"] .hover\:bg-\[\#c9a45c\]:hover {
+  background-color: var(--theme-accent-hover) !important;
+  color: var(--theme-button-text) !important;
+}
+
+html[data-theme="offwhite"] .bg-\[\#050505\] {
+  background-color: var(--theme-bg) !important;
+}
+
+html[data-theme="offwhite"] .hover\:bg-\[\#050505\]:hover {
+  background-color: var(--theme-accent-hover) !important;
+  color: var(--theme-button-text) !important;
+}
+
+html[data-theme="offwhite"] [class*="border-"] {
+  border-color: var(--theme-border);
+}
+
+html[data-theme="offwhite"] h1,
+html[data-theme="offwhite"] h2,
+html[data-theme="offwhite"] h3,
+html[data-theme="offwhite"] h4,
+html[data-theme="offwhite"] h5,
+html[data-theme="offwhite"] h6 {
+  color: #8B5A2B;
+}
+
+@keyframes blob {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-blob {
+    animation: none !important;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slideInRight {
+  animation: slideInRight 0.4s ease-out forwards;
+}
+
+img,
+video,
+canvas,
+svg {
+  max-width: 100%;
+}
+
+button,
+a,
+select,
+input,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body,
+#root,
+main,
+section,
+article,
+aside,
+header,
+footer,
+nav {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* PO + Agent Off-White: containers must never change background on hover.
+   Buttons remain free to use their own hover styles. */
+/* OFF-WHITE: light cards / divs / links must NOT turn dark brown on hover.
+   Only real buttons (and solid brown elements) keep their own hover style.
+   :not(#_) adds ID-level specificity so no hover:bg-* rule can beat this. */
+html[data-theme="offwhite"] :is([class*="hover:bg-"], [class*="group-hover:bg-"]):not(button, input, select, textarea, [class*="btn-"], [class~="bg-[var(--theme-accent)]"], [class~="bg-[#c9a45c]"]):hover:not(#_),
+html[data-theme="offwhite"] .group:hover [class*="group-hover:bg-"]:not(button, input, select, textarea, [class*="btn-"], [class~="bg-[var(--theme-accent)]"], [class~="bg-[#c9a45c]"]):not(#_) {
+  background-color: var(--theme-bg) !important;
+  background-image: none !important;
+}
+
+/* Remove all div/card shadows in Off-White theme */
+html[data-theme="offwhite"] div,
+html[data-theme="offwhite"] section,
+html[data-theme="offwhite"] article,
+html[data-theme="offwhite"] aside {
+  box-shadow: none !important;
+}
+
+/* PO side: same clean brown borders as Agent cards/containers */
+@supports selector(body:has(*)) {
+  html[data-theme="offwhite"] body:has(a[href="/podashboard"]) main [class*="rounded-2xl"],
+  html[data-theme="offwhite"] body:has(a[href="/podashboard"]) main [class*="rounded-xl"] {
+    border: 1px solid #8B5A2B !important;
+  }
+}
+
+/* Agent Sidebar only: completely remove navigation hover effects.
+   Active item keeps its existing brown background and white text. */
+html[data-theme="offwhite"] body:has(a[href="/agentproperties"]) aside a:not([aria-current="page"]):hover {
+  background-color: var(--theme-surface) !important;
+  color: var(--theme-muted-light) !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+html[data-theme="offwhite"] body:has(a[href="/agentproperties"]) aside a:not([aria-current="page"]):hover span,
+html[data-theme="offwhite"] body:has(a[href="/agentproperties"]) aside a:not([aria-current="page"]):hover svg {
+  color: var(--theme-muted-light) !important;
+}
+
+html[data-theme="offwhite"] body:has(a[href="/agentproperties"]) aside a[aria-current="page"]:hover {
+  background-color: var(--theme-accent) !important;
+  color: var(--theme-button-text) !important;
+  border-color: var(--theme-accent-hover) !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+html[data-theme="offwhite"] body:has(a[href="/agentproperties"]) aside a[aria-current="page"]:hover span,
+html[data-theme="offwhite"] body:has(a[href="/agentproperties"]) aside a[aria-current="page"]:hover svg {
+  color: var(--theme-button-text) !important;
+}
+
+/* Off-White navbar (Home, My Booking, Contact, About):
+   text never turns white on hover / click / focus / active. */
+html[data-theme="offwhite"] a:focus,
+html[data-theme="offwhite"] a:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* The :not(#_) trick adds ID-level specificity so this beats every
+   hover:bg-* / hover:text-* rule above (those were turning the text white). */
+html[data-theme="offwhite"] nav:not(aside *) a:not(#_),
+html[data-theme="offwhite"] nav:not(aside *) a:not(#_):hover,
+html[data-theme="offwhite"] nav:not(aside *) a:not(#_):focus,
+html[data-theme="offwhite"] nav:not(aside *) a:not(#_):active,
+html[data-theme="offwhite"] nav:not(aside *) a:not(#_):focus-visible,
+html[data-theme="offwhite"] header a:not(#_):hover,
+html[data-theme="offwhite"] header a:not(#_):focus,
+html[data-theme="offwhite"] header a:not(#_):active {
+  color: var(--theme-text) !important;
+  -webkit-text-fill-color: var(--theme-text) !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+html[data-theme="offwhite"] nav:not(aside *) a:not(#_) span,
+html[data-theme="offwhite"] nav:not(aside *) a:not(#_):hover span,
+html[data-theme="offwhite"] nav:not(aside *) a:not(#_):active span {
+  color: var(--theme-text) !important;
+}
+
+/* ---- OFF-WHITE: no white text on hover for non-button elements ----
+   The .hover:bg-[#c9a45c] / .hover:bg-[#050505] rules give white text to ANY
+   element with those classes (links, cards, list items). Only real buttons
+   should get white text; everything else keeps the theme text color. */
+html[data-theme="offwhite"] :is(a, div, li, span, p, label, section, article, aside, td, tr):is([class*="hover:bg-"], [class*="hover:text-"]):hover:not(#_) {
+  color: var(--theme-text) !important;
+  -webkit-text-fill-color: var(--theme-text) !important;
+}
+
+/* ---- OFF-WHITE: no white text on click ----
+   1) Clicking / double-clicking text selects it, and ::selection used
+      accent background + white text. Use a soft brown highlight with dark text.
+   2) Header/nav text can't be selected by clicking links.
+   3) Any focus/active/hover state inside header/nav keeps brown text. */
+html[data-theme="offwhite"] ::selection,
+html[data-theme="offwhite"] input::selection,
+html[data-theme="offwhite"] textarea::selection {
+  background-color: rgba(139, 90, 43, 0.25) !important;
+  color: var(--theme-text) !important;
+  -webkit-text-fill-color: var(--theme-text) !important;
+}
+
+html[data-theme="offwhite"] header a,
+html[data-theme="offwhite"] nav a {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html[data-theme="offwhite"] :is(header, nav):not(aside *) :is(a, a *):is(:hover, :focus, :active, :focus-visible):not(#_) {
+  color: var(--theme-text) !important;
+  -webkit-text-fill-color: var(--theme-text) !important;
+}
+
+/* ---- OFF-WHITE: all gray / faded text becomes dark brown (PO, Tenant, Agent, Admin) ----
+   Covers muted theme classes (also with /opacity), old hard-coded muted hex colors,
+   and Tailwind gray/slate/zinc/neutral/stone text classes. */
+html[data-theme="offwhite"] :is(
+  [class*="text-[var(--theme-muted"],
+  [class*="text-[#bdb6aa"],
+  [class*="text-[#8f897f"],
+  [class*="text-[#b8b0a3"],
+  [class*="text-[#777066"],
+  [class*="text-[#6f695f"],
+  [class*="text-gray-"],
+  [class*="text-slate-"],
+  [class*="text-zinc-"],
+  [class*="text-neutral-"],
+  [class*="text-stone-"],
+  .text-muted,
+  .theme-muted,
+  .theme-muted-light,
+  .theme-muted-dark
+):not([class*="btn-"], button):not(#_) {
+  color: var(--theme-muted) !important;
+  -webkit-text-fill-color: var(--theme-muted) !important;
+  opacity: 1 !important;
+}
+
+html[data-theme="offwhite"] input::placeholder,
+html[data-theme="offwhite"] textarea::placeholder {
+  color: #7a4a1c !important;
+  opacity: 1 !important;
+}
+
+/* ---- OFF-WHITE: EVERY gray in the project becomes brown (no hover needed) ----
+   Tailwind's gray/slate/zinc/neutral/stone palettes and the custom
+   muted / surface / divider colors are re-mapped to a brown scale, so
+   text, borders, backgrounds, icons, dividers and rings using them all
+   turn brown automatically. Light shades (50-200) stay light brown tints
+   so backgrounds keep readable text; 400-950 are dark browns. */
+html[data-theme="offwhite"] {
+  --color-muted: #5C3310;
+  --color-surface: #F0E6D6;
+  --color-divider: #D9C3A5;
+  --color-gray-50: #FAF5EC;
+  --color-gray-100: #F0E6D6;
+  --color-gray-200: #E3D2B8;
+  --color-gray-300: #A9835A;
+  --color-gray-400: #8B5A2B;
+  --color-gray-500: #7A4A1C;
+  --color-gray-600: #6B3F14;
+  --color-gray-700: #5C3310;
+  --color-gray-800: #4A280C;
+  --color-gray-900: #3A1F08;
+  --color-gray-950: #2A1505;
+  --color-slate-50: #FAF5EC;
+  --color-slate-100: #F0E6D6;
+  --color-slate-200: #E3D2B8;
+  --color-slate-300: #A9835A;
+  --color-slate-400: #8B5A2B;
+  --color-slate-500: #7A4A1C;
+  --color-slate-600: #6B3F14;
+  --color-slate-700: #5C3310;
+  --color-slate-800: #4A280C;
+  --color-slate-900: #3A1F08;
+  --color-slate-950: #2A1505;
+  --color-zinc-50: #FAF5EC;
+  --color-zinc-100: #F0E6D6;
+  --color-zinc-200: #E3D2B8;
+  --color-zinc-300: #A9835A;
+  --color-zinc-400: #8B5A2B;
+  --color-zinc-500: #7A4A1C;
+  --color-zinc-600: #6B3F14;
+  --color-zinc-700: #5C3310;
+  --color-zinc-800: #4A280C;
+  --color-zinc-900: #3A1F08;
+  --color-zinc-950: #2A1505;
+  --color-neutral-50: #FAF5EC;
+  --color-neutral-100: #F0E6D6;
+  --color-neutral-200: #E3D2B8;
+  --color-neutral-300: #A9835A;
+  --color-neutral-400: #8B5A2B;
+  --color-neutral-500: #7A4A1C;
+  --color-neutral-600: #6B3F14;
+  --color-neutral-700: #5C3310;
+  --color-neutral-800: #4A280C;
+  --color-neutral-900: #3A1F08;
+  --color-neutral-950: #2A1505;
+  --color-stone-50: #FAF5EC;
+  --color-stone-100: #F0E6D6;
+  --color-stone-200: #E3D2B8;
+  --color-stone-300: #A9835A;
+  --color-stone-400: #8B5A2B;
+  --color-stone-500: #7A4A1C;
+  --color-stone-600: #6B3F14;
+  --color-stone-700: #5C3310;
+  --color-stone-800: #4A280C;
+  --color-stone-900: #3A1F08;
+  --color-stone-950: #2A1505;
+}
+
+/* Hard-coded gray hex classes (text-[#6B7280], border-[#E5E7EB], bg-[#F3F4F6] ...) */
+html[data-theme="offwhite"] :is(
+  [class*="text-[#6B7280"], [class*="text-[#6b7280"],
+  [class*="text-[#9CA3AF"], [class*="text-[#9ca3af"],
+  [class*="text-[#4B5563"], [class*="text-[#4b5563"],
+  [class*="text-[#374151"], [class*="text-[#D1D5DB"], [class*="text-[#d1d5db"]
+):not([class*="btn-"], button):not(#_) {
+  color: #5C3310 !important;
+  -webkit-text-fill-color: #5C3310 !important;
+}
+
+html[data-theme="offwhite"] :is(
+  [class*="border-[#E5E7EB"], [class*="border-[#e5e7eb"],
+  [class*="border-[#D1D5DB"], [class*="border-[#d1d5db"],
+  [class*="border-[#9CA3AF"], [class*="border-[#9ca3af"]
+):not(#_) {
+  border-color: #8B5A2B !important;
+}
+
+html[data-theme="offwhite"] :is(
+  [class*="bg-[#F3F4F6"], [class*="bg-[#f3f4f6"],
+  [class*="bg-[#F9FAFB"], [class*="bg-[#f9fafb"],
+  [class*="bg-[#E5E7EB"], [class*="bg-[#e5e7eb"]
+):not(button, [class*="btn-"]):not(#_) {
+  background-color: #F0E6D6 !important;
+}
+
+/* BLACK THEME ONLY — unified black backgrounds */
+html[data-theme="black"] {
+  --theme-bg: #000000;
+  --theme-surface: #000000;
+  --theme-card: #000000;
+}
+
+html[data-theme="black"] body,
+html[data-theme="black"] #root,
+html[data-theme="black"] main,
+html[data-theme="black"] aside,
+html[data-theme="black"] header,
+html[data-theme="black"] section,
+html[data-theme="black"] article,
+html[data-theme="black"] nav {
+  background-color: #000000 !important;
+}
+
+html[data-theme="black"] [class*="bg-[#171717]"],
+html[data-theme="black"] [class*="bg-[#050505]"],
+html[data-theme="black"] [class*="bg-[#0d0d0d]"],
+html[data-theme="black"] [class*="bg-neutral-900"],
+html[data-theme="black"] [class*="bg-zinc-900"] {
+  background-color: #000000 !important;
+}
+
+/* =====================================================
+   STATUS COLORS — same in ALL themes (keep at the END)
+   Cancel / Reject / Inactive  -> red
+   Confirm / Active            -> green
+   Pending                     -> brown
+   ===================================================== */
+:root .btn-cancel,
+:root .btn-reject,
+:root .btn-inactive {
+  background-color: var(--status-red) !important;
+  border-color: var(--status-red) !important;
+  color: #ffffff !important;
+}
+
+:root .btn-cancel:hover,
+:root .btn-reject:hover,
+:root .btn-inactive:hover {
+  background-color: var(--status-red-hover) !important;
+  border-color: var(--status-red-hover) !important;
+  color: #ffffff !important;
+}
+
+:root .btn-confirm,
+:root .btn-active {
+  background-color: var(--status-green) !important;
+  border-color: var(--status-green) !important;
+  color: #ffffff !important;
+}
+
+:root .btn-confirm:hover,
+:root .btn-active:hover {
+  background-color: var(--status-green-hover) !important;
+  border-color: var(--status-green-hover) !important;
+  color: #ffffff !important;
+}
+
+:root .btn-pending {
+  background-color: var(--status-gold) !important;
+  border-color: var(--status-gold) !important;
+  color: #ffffff !important;
+}
+
+:root .btn-pending:hover {
+  background-color: var(--status-gold-hover) !important;
+  border-color: var(--status-gold-hover) !important;
+  color: #ffffff !important;
+}
+
+/* Text/icons inside status buttons and badges always stay white */
+:root .btn-cancel *,
+:root .btn-reject *,
+:root .btn-inactive *,
+:root .btn-confirm *,
+:root .btn-active *,
+:root .btn-pending * {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+.date-icon-gold::-webkit-calendar-picker-indicator {
+  filter: invert(76%) sepia(38%) saturate(650%) hue-rotate(360deg) brightness(92%) contrast(90%);
+  opacity: 1;
+  cursor: pointer;
+}
+
+.date-icon-brown::-webkit-calendar-picker-indicator {
+  filter: invert(35%) sepia(35%) saturate(1000%) hue-rotate(350deg) brightness(85%) contrast(90%);
+  opacity: 1;
+  cursor: pointer;
+}
+.booking-filter-btn {
+  padding: 6px 14px;
+  border-radius: 8px;
+  background: transparent !important;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: 1.5px solid transparent !important;
+}
+
+.booking-filter-recent {
+  color: var(--theme-accent) !important;
+  border-color: var(--theme-accent) !important;
+}
+
+.booking-filter-recent:hover,
+.booking-filter-recent.booking-filter-active {
+  background: var(--theme-accent) !important;
+  color: var(--theme-button-text) !important;
+}
+
+.booking-filter-pending {
+  color: #f59e0b !important;
+  border-color: #f59e0b !important;
+}
+
+.booking-filter-pending:hover,
+.booking-filter-pending.booking-filter-active {
+  background: #f59e0b !important;
+  color: #ffffff !important;
+}
+
+.booking-filter-confirmed {
+  color: #16a34a !important;
+  border-color: #16a34a !important;
+}
+
+.booking-filter-confirmed:hover,
+.booking-filter-confirmed.booking-filter-active {
+  background: #16a34a !important;
+  color: #ffffff !important;
+}
+
+.booking-filter-cancelled {
+  color: #dc2626 !important;
+  border-color: #dc2626 !important;
+}
+
+.booking-filter-cancelled:hover,
+.booking-filter-cancelled.booking-filter-active {
+  background: #dc2626 !important;
+  color: #ffffff !important;
+}
+.status-pending {
+  color: #f59e0b !important;
+  border: 1px solid #f59e0b !important;
+  background: transparent !important;
+  font-weight: 800 !important;
+}
+
+.status-pending:hover {
+  background: #f59e0b !important;
+  color: #ffffff !important;
+}
+
+.status-confirmed {
+  color: #22c55e !important;
+  border: 1px solid #22c55e !important;
+  background: transparent !important;
+  font-weight: 800 !important;
+}
+
+.status-confirmed:hover {
+  background: #22c55e !important;
+  color: #ffffff !important;
+}
+
+.status-cancelled {
+  color: #ef4444 !important;
+  border: 1px solid #ef4444 !important;
+  background: transparent !important;
+  font-weight: 800 !important;
+}
+
+.status-cancelled:hover {
+  background: #ef4444 !important;
+  color: #ffffff !important;
+}
+
+.booking-cancel-btn {
+  color: #ef4444 !important;
+  border: 1px solid #ef4444 !important;
+  background: transparent !important;
+  font-weight: 800 !important;
+}
+
+.booking-cancel-btn:hover {
+  background: #ef4444 !important;
+  color: #ffffff !important;
+}
+.status-pending {
+  color: #f59e0b !important;
+  border: 1px solid #f59e0b !important;
+  background: transparent !important;
+  font-weight: 800 !important;
+}
+
+.status-pending:hover {
+  background: #f59e0b !important;
+  color: #ffffff !important;
+}
+
+.status-confirmed {
+  color: #22c55e !important;
+  border: 1px solid #22c55e !important;
+  background: transparent !important;
+  font-weight: 800 !important;
+}
+
+.status-confirmed:hover {
+  background: #22c55e !important;
+  color: #ffffff !important;
+}
+
+.status-cancelled {
+  color: #ef4444 !important;
+  border: 1px solid #ef4444 !important;
+  background: transparent !important;
+  font-weight: 800 !important;
+}
+
+.status-cancelled:hover {
+  background: #ef4444 !important;
+  color: #ffffff !important;
+}
+
+.booking-cancel-btn {
+  color: #ef4444 !important;
+  border: 1px solid #ef4444 !important;
+  background: transparent !important;
+  font-weight: 800 !important;
+}
+
+.booking-cancel-btn:hover {
+  background: #ef4444 !important;
+  color: #ffffff !important;
+}
+
+.booking-cancel-confirm-btn {
+  color: #ef4444 !important;
+  border: 1px solid #ef4444 !important;
+  background: transparent !important;
+  font-weight: 800 !important;
+}
+
+.booking-cancel-confirm-btn:hover {
+  background: #ef4444 !important;
+  color: #ffffff !important;
+}
